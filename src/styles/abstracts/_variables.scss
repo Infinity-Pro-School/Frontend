@@ -1,0 +1,16 @@
+@use "../base/colors";
+
+:root {
+    font-size: 62.5%;
+    @each $name, $prop in colors.$color-scheme {
+        @each $level, $color in $prop {
+            --clr-#{$name}-#{$level}: #{$color};
+        }
+    }
+    --primary-btn-color: var(--clr-secondary-200);
+    --primary-btn-bg: var(--clr-primary-100);
+    --secondary-btn-color: var(--clr-primary-100);
+    --secondary-btn-bg: var(--clr-secondary-200);
+    --success-btn-color: var(--clr-secondary-200);
+    --success-btn-bg: var(--clr-success-100);
+}

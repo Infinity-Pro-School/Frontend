@@ -1,0 +1,16 @@
+.hamburger[aria-expanded="true"]{
+    background: #000;
+    & span {
+        position: absolute;
+        transition: transform 300ms ease-in-out
+    };
+    & span:nth-child(1){
+        transform: rotate(45deg);
+    }
+    & span:nth-child(3){
+        transform: rotate(-45deg);
+    }
+    & span:nth-child(2){
+        transform: scale(0);
+    }
+}

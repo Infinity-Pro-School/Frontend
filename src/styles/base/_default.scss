@@ -1,0 +1,75 @@
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+    height: 100%;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100%;
+    margin: 0;
+    font-size: 1.6rem;
+    font-family: "Roboto",sans-serif !important;
+    scroll-behavior: smooth;
+}
+
+#root{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+h1,
+h2,
+h3,
+h4,
+p {
+    margin: 0;
+}
+
+button {
+    padding: 0;
+}
+
+button,
+input {
+    font-family: inherit;
+}
+
+img {
+    display: block;
+    height: auto;
+}
+
+ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+a {
+    display: inline-block;
+    text-decoration: none;
+}
+
+.visually-hidden {
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+}
+
+/* sticky footer */
+.site-main {
+    flex-grow: 1;
+}

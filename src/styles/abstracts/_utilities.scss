@@ -1,0 +1,13 @@
+@use "../base/colors";
+
+@each $name, $prop in colors.$color-scheme {
+    @each $level, $color in $prop {
+        .bg-#{$name}-#{$level} {
+            
+            background-color: #{$color};
+        }
+        .text-#{$name}-#{$level} {
+            color: #{$color};
+        }
+    }
+}
