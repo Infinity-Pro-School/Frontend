@@ -2,11 +2,12 @@ import { StyledContainer, StyledEvenColumns, StyledSection, StyledTextContainer 
 import { RegisterButton } from "@components/Button/Button";
 import PageText from "@components/PageText";
 import PageTitle from "@components/PageTitle";
+import { ReactNode } from "react";
 import PageImage from "../PageImage";
 
 type PageSectionProps = {
     pageTitle: string;
-    pageText: string;
+    pageText: ReactNode;
     shouldRegister?: boolean;
     pageImage: string;
 }

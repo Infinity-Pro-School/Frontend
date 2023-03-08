@@ -5,6 +5,7 @@ import { Link as RouterLink } from "react-router-dom";
 import { HamburgerIcon } from "@chakra-ui/icons";
 import { useNavStore } from "@/features";
 import SiteLogo from "/logo.svg";
+import LanguageSelect from "@components/LanguageSelect";
 const Navigation = lazy(() => import("@components/Navigation"));
 export default function Header() {
     const { toggle, display } = useNavStore();
@@ -22,6 +23,7 @@ export default function Header() {
                         <HamburgerIcon aria-hidden="true" width={"32px"} height={"32px"} />
                     </Box>
                     <Navigation />
+                    <LanguageSelect />
                 </Flex>
             </StyledContainer>
         </Box>

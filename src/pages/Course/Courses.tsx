@@ -7,17 +7,22 @@ import courses from "@/data/courses";
 import { StyledContainer, StyledSection } from "@/styles/globals";
 import { Box, Card, CardBody, CardFooter, CardHeader, Grid, GridItem, Heading, Text } from "@chakra-ui/react";
 import { motion } from "framer-motion";
+import { useTranslation } from "react-i18next";
 import CourseImage from "/courses/teaching.svg";
+
+type CurrentLang = "uz" | "en" | "ru" | string;
+
 export default function Courses() {
+  const { t, i18n: { language } } = useTranslation();
   return (
     <>
       <AnimatePage>
-        <PageSection pageTitle="Take your General English skills to the next level!" pageText="We mainly focus on general English to make sure that you will have a better understanding of core English!" pageImage={CourseImage} />
+        <PageSection pageTitle={t("courses")} pageText={t("courses_description")} pageImage={CourseImage} />
         <StyledSection>
           <StyledContainer>
             <Box mb="12">
               <PageTitle textAlign="center">
-                Courses
+                {t("courses")}
               </PageTitle>
             </Box>
             <Grid templateColumns={["repeat(auto-fit,min(250px,100%))", "repeat(auto-fit,min(300px,100%))", "repeat(auto-fit,min(350px,100%))"]} justifyContent="center" gap=
@@ -33,12 +38,13 @@ export default function Courses() {
                       </CardHeader>
                       <CardBody>
                         <Text textAlign="center" size={["xl", "xl", "2xl", "3xl"]}>
-                          {course.description}
+                          {/* @ts-ignore */}
+                          {course.description[language]}
                         </Text>
                       </CardBody>
                       <CardFooter>
                         <QuickTipButton to="/course/signup">
-                          Find out more
+                          {t("find_more")}
                         </QuickTipButton>
                       </CardFooter>
                     </Card>

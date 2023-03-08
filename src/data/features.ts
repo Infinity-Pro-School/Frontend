@@ -5,24 +5,24 @@ type Feature = {
 
 const features: Feature[] = [
     {
-        title: "Experience",
-        body: "We believe that we have a great experience of teaching to almost 1000 students in 4 years. ",
+        title: "experience",
+        body: "",
     },
     {
-        title: "Experience",
-        body: "We believe that we have a great experience of teaching to almost 1000 students in 4 years. ",
+        title: "experience",
+        body: "",
     },
     {
-        title: "Experience",
-        body: "We believe that we have a great experience of teaching to almost 1000 students in 4 years. ",
+        title: "experience",
+        body: "",
     },
     {
-        title: "Experience",
-        body: "We believe that we have a great experience of teaching to almost 1000 students in 4 years. ",
+        title: "experience",
+        body: "",
     },
     {
-        title: "Experience",
-        body: "We believe that we have a great experience of teaching to almost 1000 students in 4 years. ",
+        title: "experience",
+        body: "",
     },
 ];
 

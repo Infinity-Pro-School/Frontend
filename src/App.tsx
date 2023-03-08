@@ -1,4 +1,4 @@
-import { lazy, Suspense } from "react";
+import { lazy, Suspense, useEffect } from "react";
 import { Route, Routes } from "react-router-dom";
 
 import Loader from "@components/Loader";
@@ -11,10 +11,9 @@ const About = lazy(() => import("@pages/About"));
 const Gallery = lazy(() => import("@pages/Gallery"));
 
 function App() {
-
   return (
     <>
-      
+
       <Suspense fallback={<Loader />}>
         <Routes>
           <Route element={<RootLayout />}>

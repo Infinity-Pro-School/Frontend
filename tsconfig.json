@@ -2,7 +2,11 @@
   "compilerOptions": {
     "target": "ESNext",
     "useDefineForClassFields": true,
-    "lib": ["DOM", "DOM.Iterable", "ESNext"],
+    "lib": [
+      "DOM",
+      "DOM.Iterable",
+      "ESNext"
+    ],
     "allowJs": false,
     "skipLibCheck": true,
     "esModuleInterop": false,
@@ -17,19 +21,47 @@
     "jsx": "react-jsx",
     "baseUrl": ".",
     "paths": {
-      "@/*":["./src/*"],
-      "@api/*":["./src/api/*"],
-      "@assets/*":["./src/assets/*"],
-      "@components/*":["./src/components/*"],
-      "@features/*":["./src/features/*"],
-      "@hooks/*":["./src/hooks/*"],
-      "@layouts/*":["./src/layouts/*"],
-      "@pages/*":["./src/pages/*"],
-      "@styles/*":["./src/styles/*"],
-      "@types/*":["./src/types/*"],
-      "@interfaces/*":["./src/interfaces/*"],
+      "@/*": [
+        "./src/*"
+      ],
+      "@api/*": [
+        "./src/api/*"
+      ],
+      "@assets/*": [
+        "./src/assets/*"
+      ],
+      "@components/*": [
+        "./src/components/*"
+      ],
+      "@features/*": [
+        "./src/features/*"
+      ],
+      "@hooks/*": [
+        "./src/hooks/*"
+      ],
+      "@layouts/*": [
+        "./src/layouts/*"
+      ],
+      "@pages/*": [
+        "./src/pages/*"
+      ],
+      "@styles/*": [
+        "./src/styles/*"
+      ],
+      "@types/*": [
+        "./src/types/*"
+      ],
+      "@interfaces/*": [
+        "./src/interfaces/*"
+      ],
     }
   },
-  "include": ["src"],
-  "references": [{ "path": "./tsconfig.node.json" }]
+  "include": [
+    "src"
+  ],
+  "references": [
+    {
+      "path": "./tsconfig.node.json"
+    }
+  ]
 }

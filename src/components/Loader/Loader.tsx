@@ -1,7 +1,10 @@
+import { Box } from "@chakra-ui/react";
 import { PuffLoader } from "react-spinners";
 
 export default function Loader() {
     return (
-        <PuffLoader size={200} />
+        <Box height="100vh" display="flex" justifyContent="center" alignItems="center">
+            <PuffLoader size={200} />
+        </Box>
     )
 }

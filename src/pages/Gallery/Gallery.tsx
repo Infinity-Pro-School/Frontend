@@ -6,21 +6,23 @@ import { StyledContainer, StyledSection } from "@/styles/globals";
 import { Box, Card, CardBody, Grid, GridItem, Image } from "@chakra-ui/react";
 import { motion } from "framer-motion";
 import { lazy } from "react";
+import { useTranslation } from "react-i18next";
 
 const PageSection = lazy(() => import("@components/PageSection"));
 
 import galleryImage from "/gallery/gallery.svg";
 
 export default function Gallery() {
+    const { t } = useTranslation();
     return (
         <>
             <AnimatePage>
-                <PageSection pageTitle="Our gallery" pageText="Enjoy the views of the amazing moments that we had with our students!" pageImage={galleryImage} />
+                <PageSection pageTitle={t("gallery")} pageText={t("gallery_description")} pageImage={galleryImage} />
                 <StyledSection>
                     <StyledContainer>
                         <Box mb="12" mt="96">
                             <PageTitle textAlign="center">
-                                Gallery
+                                {t("gallery")}
                             </PageTitle>
                         </Box>
                         <Grid templateColumns={["repeat(auto-fit,min(250px,100%))", "repeat(auto-fit,min(300px,100%))", "repeat(auto-fit,min(350px,100%))"]} justifyContent="center" gap=

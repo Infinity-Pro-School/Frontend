@@ -15,13 +15,13 @@ html {
 
 body {
     height: 100%;
-    margin: 0;
     font-size: 1.6rem;
-    font-family: "Roboto",sans-serif !important;
+    font-family: "Roboto", sans-serif !important;
     scroll-behavior: smooth;
+
 }
 
-#root{
+#root {
     display: flex;
     flex-direction: column;
     height: 100%;

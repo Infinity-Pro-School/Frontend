@@ -6,18 +6,20 @@ import ratingInfo from "@/data/ratings";
 import { StyledContainer, StyledSection } from "@/styles/globals";
 import { Box, Card, CardBody, Grid, GridItem, Image } from "@chakra-ui/react";
 import { motion } from "framer-motion";
+import { useTranslation } from "react-i18next";
 import RatingsImage from "/ratings/ratings.svg";
 
 export default function Ratings() {
+  const { t } = useTranslation();
   return (
     <>
       <AnimatePage>
-        <PageSection pageTitle="Ratings" pageText="Want to know more about our students? Just go down below to get to know our best students!" pageImage={RatingsImage} />
+        <PageSection pageTitle={t("ratings")} pageText={t("ratings_description")} pageImage={RatingsImage} />
         <StyledSection className="pb-12 pt-96">
           <StyledContainer>
             <Box mb="12">
               <PageTitle textAlign={"center"}>
-                {ratingInfo.description}
+                {t("top_students")}
               </PageTitle>
             </Box>
             <Grid templateColumns={["repeat(auto-fit,min(300px,100%))", "repeat(auto-fit,min(350px,100%))", "repeat(auto-fit,min(400px,100%))"]} justifyContent="center" gap=

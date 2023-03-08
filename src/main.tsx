@@ -6,6 +6,7 @@ import { BrowserRouter } from "react-router-dom";
 import { ChakraProvider } from "@chakra-ui/react";
 import "@styles/main.scss";
 import { AnimatePresence } from "framer-motion";
+import "@/lang/i18n";
 export const axiosClient = axios.create({
   baseURL: "https://jsonplaceholder.typicode.com/"
 });

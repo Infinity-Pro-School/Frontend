@@ -5,23 +5,25 @@ import PageTitle from "@/components/PageTitle";
 import PageText from "@/components/PageText";
 import StyledHero from "./hero.styles";
 import HeroImg from "/home/hero.svg";
+import PageImage from "@/components/PageImage";
+import { useTranslation } from "react-i18next";
 
 export default function Hero() {
+    const { t } = useTranslation();
     return (
         <StyledHero>
             <StyledContainer>
                 <StyledEvenColumns>
                     <StyledTextContainer className="pt-24 overflow-hidden" marginX="auto" maxW="600px">
                         <PageTitle>
-                            Infinity - we develop passion for learning!
+                            {t("main_title")}
                         </PageTitle>
                         <PageText>
-                            Take your General English skills to the next level!
-                            Sign up for our courses for just <Text color="red" fontFamily="Bungee" as="span" className="underline">350.000</Text> soums!
+                            {t("main_description")} <Text color="red" fontFamily="Bungee" as="span" className="underline">{t("main_price")}</Text> {t("main_soums")}!
                         </PageText>
                         <RegisterButton />
                     </StyledTextContainer>
-                    <Image width={["200px", "300px", "350px", "450px", "480px"]} margin="auto" height={300} aria-hidden="true" alt="Infinity brand image" className="w-full" src={HeroImg} />
+                    <PageImage imageSource={HeroImg} />
                 </StyledEvenColumns>
             </StyledContainer>
         </StyledHero>

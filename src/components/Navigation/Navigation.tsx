@@ -2,8 +2,10 @@ import { useNavStore } from "@/features";
 import { Box, Flex } from "@chakra-ui/react";
 import { Link as RouterLink } from "react-router-dom";
 import { Link } from "@chakra-ui/react";
+import { useTranslation } from "react-i18next";
 
 export default function Navigation() {
+  const { t } = useTranslation();
   const { display } = useNavStore();
   return (
     <Box display={{
@@ -16,27 +18,27 @@ export default function Navigation() {
       }} justifyContent="center" alignItems="center" className="navigation-list gap-6 lg:gap-3" as="ul" gap="2rem">
         <Box as="li">
           <Link to="/" as={RouterLink}>
-            Home
+            {t("home")}
           </Link>
         </Box>
         <Box as="li">
           <Link to="/about" as={RouterLink}>
-            About
+            {t("about")}
           </Link>
         </Box>
         <Box as="li">
           <Link to="/courses" as={RouterLink}>
-            Courses
+            {t("courses")}
           </Link>
         </Box>
         <Box as="li">
           <Link to="/ratings" as={RouterLink}>
-            Ratings
+            {t("ratings")}
           </Link>
         </Box>
         <Box as="li">
           <Link to="/gallery" as={RouterLink}>
-            Gallery
+            {t("gallery")}
           </Link>
         </Box>
       </Flex>
