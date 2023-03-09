@@ -19,7 +19,7 @@ export default function Header() {
                     <Box onClick={toggle} display={{
                         base: "block",
                         md: "none"
-                    }} as="button" type="button">
+                    }} as="button" aria-label="Click to open our menu" type="button">
                         <HamburgerIcon aria-hidden="true" width={"32px"} height={"32px"} />
                     </Box>
                     <Navigation />

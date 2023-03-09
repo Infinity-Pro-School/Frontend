@@ -49,4 +49,7 @@ export default defineConfig({
             "@interfaces": resolve(process.cwd(), "src", "interfaces"),
         },
     },
+    build: {
+        assetsInlineLimit:2048
+    }
 });

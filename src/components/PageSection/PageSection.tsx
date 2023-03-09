@@ -14,7 +14,7 @@ type PageSectionProps = {
 
 export default function PageSection({ pageTitle, pageText, shouldRegister = true, pageImage }: PageSectionProps) {
     return (
-        <StyledSection className="mb-24 pt-36">
+        <StyledSection className="mb-24 pt-12 md:pt-24 lg:pt-36">
             <StyledContainer>
                 <StyledEvenColumns>
                     <StyledTextContainer className="pt-24" marginX="auto" maxW="650px">

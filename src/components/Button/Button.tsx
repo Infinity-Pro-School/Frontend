@@ -15,8 +15,8 @@ export function RegisterButton() {
     base: "center",
     lg: "start"
   }} alignItems="center" className="mb-8 lg:mb-0">
-    <ChakraButton colorScheme="red" rounded="full" fontSize={["1rem", "2rem", "2.5rem"]} padding={["1em", "1em", "1em", "1.5em 2em"]} rightIcon={<ArrowForwardIcon />} className="shadow-[0px_15px_15px_-10px_#FF9F8E]">
-      <RouterLink to="/course/signup" >
+    <ChakraButton aria-label="Click on the link to register for our courses" colorScheme="red" rounded="full" fontSize={["1rem", "2rem", "2.5rem"]} padding={["1em", "1em", "1em", "1.5em 2em"]} rightIcon={<ArrowForwardIcon />} className="shadow-[0px_15px_15px_-10px_#FF9F8E]">
+      <RouterLink aria-label="Click on the link to register for our courses" to="/course/signup" >
         {t("register")}
       </RouterLink>
     </ChakraButton>
@@ -24,8 +24,8 @@ export function RegisterButton() {
 }
 
 export function QuickTipButton({ children, to }: { children: ReactNode, to: To }) {
-  return <ChakraButton width="max-content" mx="auto" colorScheme="red" rounded="full" fontSize={["1rem", "1.2rem", "1.75rem"]} padding={["1em"]} rightIcon={<ArrowForwardIcon />}>
-    <RouterLink to={to}>
+  return <ChakraButton aria-label="Click on the link below to get more information" width="max-content" mx="auto" colorScheme="red" rounded="full" fontSize={["1rem", "1.2rem", "1.75rem"]} padding={["1em"]} rightIcon={<ArrowForwardIcon />}>
+    <RouterLink aria-label="Click on the link to register for our courses" to={to}>
       {children}
     </RouterLink>
   </ChakraButton>

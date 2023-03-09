@@ -23,7 +23,7 @@ export default function Footer() {
           <Flex as="ul" gap="1rem">
             {socialLinks.map(socialLink => (
               <Box key={socialLink.title} as="li">
-                <Link href={socialLink.link}>
+                <Link href={socialLink.link} aria-label={`Click to visit our ${socialLink.title} page`}>
                   <Image src={socialLink.iconPath} width="32px" height="32px" aria-hidden alt={`${socialLink.title} icon`} />
                 </Link>
               </Box>
